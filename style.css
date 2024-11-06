@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --Purple-100: hsl(254, 88%, 90%);
+    --Purple-500: hsl(256, 67%, 59%);
+
+    --Yellow-100: hsl(31, 66%, 93%);
+    --Yellow-500: hsl(39, 100%, 71%);
+
+    --White: hsl(0, 0%, 100%);
+    --Black: hsl(0, 0%, 7%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F5F5F5;
+    font-family: "DM Sans", sans-serif;
+}
+
+.bento-wrapper {
+    margin: 100px auto;
+    width: 85%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 150px;
+    gap: 35px;
+}
+
+.bento-item  {
+    border-radius: 10px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+}
+
+/* first bento box */
+.bento-item.one {
+    grid-row: 1/4;
+    grid-column: 1/2;
+    background-color: var(--Yellow-100);
+    padding: 90px 25px;
+    gap: 35px;
+}
+
+.bento-item.one h2,
+.bento-item.three h2,
+.bento-item.four h2,
+.bento-item.five h2,
+.bento-item.six h2,
+.bento-item.seven h2,
+.bento-item.eight h2    {
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 1px;
+}
+
+.bento-item.one h2 span {
+    color: var(--Purple-500);
+    font-style: italic;
+}
+
+.bento-item.one img {
+    width: 75%;
+    text-align: center;
+}
+
+/* second bento box */
+.bento-item.two {
+    grid-column: 2/4;
+    grid-row: 1/3;
+    background-color: var(--Purple-500);
+    color: #F5F5F5;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.bento-item.two h1 {
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 70px;
+}
+
+.bento-item.two h1 #faster {
+    font-style: italic;
+}
+
+.bento-item.two #number{
+    color: var(--Yellow-500);
+}
+
+.bento-item.two p {
+    font-size: 18px;
+}
+
+/* third bento box */
+.bento-item.three {
+    grid-row: 1/5;
+    grid-column: 4/5;
+    background-color: var(--Purple-100);
+    padding: 60px 25px;
+    gap: 30px;
+    overflow: hidden;
+    /* position: relative; */
+}
+
+.bento-item.three img {
+    width: 350px;
+    border-radius: 10px;
+    position: relative;
+    right: 0;
+    left: 50px;
+    height: 350px;
+}
+
+.bento-item.three p {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* fourth bento box */
+.bento-item.four {
+    grid-column: 1/2;
+    grid-row: 4/7;
+    background-color: var(--Yellow-500);
+    padding: 50px 25px;
+    gap: 60px;
+}
+
+.bento-item.four img {
+    width: 100%;
+}
+
+/* fifth bento box */
+.bento-item.five {
+    grid-column: 2/3;
+    grid-row: 3/5;
+    background-color: var(--White);
+    padding: 35px 25px;
+    gap: 30px;
+}
+
+.bento-item.five img {
+    width: 100%;
+}
+
+/* sixth bento box */
+.bento-item.six {
+    grid-column: 3/4;
+    grid-row: 3/5;
+    background-color: var(--Yellow-500);
+    padding: 25px 25px;
+    gap: 22px;
+    overflow: hidden;
+}
+
+.bento-item.six img{
+    width: 100%;
+}
+
+/* seventh bento box */
+.bento-item.seven {
+    grid-column: 2/3;
+    grid-row: 5/7;
+    background-color: var(--White);
+    padding: 45px 25px;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.bento-item.seven h3 {
+    font-size: 4.5rem;
+    font-weight: 600;
+}
+
+.bento-item.seven p {
+    font-size: 1.4rem;
+    font-weight: 500;
+}
+
+.bento-item.seven img {
+    width: 100%;
+}
+
+/* eight */
+.bento-item.eight {
+    grid-column: 3/5;
+    grid-row: 5/7;
+    background-color: var(--Purple-500);
+    flex-direction: row;
+    padding: 38px 25px;
+    align-items: center;
+}
+
+#bento-eight-img {
+    width: 250px;
+    height: 250px;
+}
+
+.bento-item.eight h2 {
+    font-size: 2.7rem;
+    color: var(--White);
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+
+
+
+/* media queries */
+
+@media (max-width: 1360px) {
+    .bento-item.one h2,
+    .bento-item.three h2,
+    .bento-item.four h2,
+    .bento-item.five h2,
+    .bento-item.six h2 ,
+    .bento-item.seven h2 {
+    font-size: 2.3rem;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 1px;
+    }
+
+    .bento-item.seven h2 {
+        font-size: 3.5rem;
+        font-weight: 600;
+    }
+
+    .bento-item.two h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 70px;
+    }
+    .bento-item.six {
+        padding: 35px 25px;
+        gap: 61px;
+    }
+
+    #bento-eight-img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .bento-item.eight h2 {
+        font-size: 2.5rem;
+        color: var(--White);
+        font-weight: 500;
+        line-height: 40px;
+        letter-spacing: 1px;
+    }
+}
+
+
+@media (max-width: 920px) {
+    .bento-wrapper {
+        width: 90%;
+        gap: 40px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .bento-item.two {
+        grid-column: 2/4;
+        grid-row: 1/4;
+    }
+
+    .bento-item.four {
+        grid-row: 4/8;
+        gap: 70px;
+        padding: 60px 20px;
+    }
+
+    .bento-item.five{
+        grid-row: 4/6;
+    }
+
+    .bento-item.six {
+        grid-row: 4/8;
+        gap: 70px;
+        padding: 60px 20px;
+    }
+
+    .bento-item.seven {
+        grid-row: 6/8;
+    }
+
+    .bento-item.eight {
+        grid-column: 3/4;
+        grid-row: 8/12;
+        flex-direction: column;
+        padding-top: 80px;
+        gap: 50px;
+    }
+
+    .bento-item.three {
+        grid-row: 8/12;
+        grid-column: 1/3;
+        gap: 40px;
+        padding: 80px 20px;
+    }
+}
+
+
+/* Mobile screen responsiveness */
+
+@media (max-width: 600px) {
+    .bento-wrapper {
+        grid-template-columns: 1fr;
+        width: 95%;
+        padding: 0 25px;
+        gap: 40px;
+    }
+
+    .bento-item.one h2,
+    .bento-item.three h2,
+    .bento-item.four h2,
+    .bento-item.five h2,
+    .bento-item.six h2 ,
+    .bento-item.seven h2 {
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
+    .bento-item.seven h3 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+
+    .bento-item.two {
+        grid-column: 1;
+        grid-row: 1/4;
+        padding: 50px 10px;
+    }
+
+    .bento-item.two h1 {
+        font-size: 3rem;
+    }
+
+    .bento-item.two img {
+        width: 90%;
+    }
+
+    .bento-item.five {
+        grid-column: 1;
+        grid-row: 4/6;
+    }
+
+    .bento-item.six {
+        grid-column: 1;
+        grid-row: 6/8;
+        gap: 12px;
+    }
+
+    .bento-item.three {
+        grid-row: 8/12;
+        grid-column: 1;
+    }
+
+    .bento-item.three img {
+        width: 100%;
+        position: static;
+        right: 0;
+        left: 0;
+    }
+
+    .bento-item.eight {
+        grid-column: 1;
+        grid-row: 12/15;
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+
+    #bento-eight-img {
+        width: 100%;
+    }
+
+    .bento-item.eight h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    .bento-item.seven {
+        grid-column: 1;
+        grid-row: 15/17;
+    }
+
+    .bento-item.one {
+        grid-row: 17/19;
+        grid-column: 1;
+    }
+
+    .bento-item.four {
+        grid-column: 1;
+        grid-row: 19/22;
+    }
+    
+}
